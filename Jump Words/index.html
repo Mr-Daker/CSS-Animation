@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background: #00071A;
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .box{
+            gap: 10px;
+            display: flex;
+            color: #F6F5FC;
+            font-weight: 800;
+            font-size: 45px ;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+        @keyframes aone {
+            0%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-50px);
+            }
+            100%{
+                transform: translateY(0);
+            }
+        }
+
+        .animate .lone{
+            
+            animation: aone 0.7s ease-in-out 1s  1 backwards;
+
+        }
+
+        .animate .ltwo{
+            animation: aone 0.7s ease-in-out 1.1s  1 backwards;
+
+        }
+        .animate .lthree{
+            animation: aone 0.7s ease-in-out 1.2s  1 backwards;
+
+        }
+        .animate .lfour{
+            animation: aone 0.7s ease-in-out 1.3s  1 backwards;
+
+        }
+        .animate .lfive{
+            animation: aone 0.7s ease-in-out 1.4s  1 backwards;
+
+        }
+        .animate .lsix{
+            animation: aone 0.7s ease-in-out 1.5s  1 backwards;
+
+        }
+        .animate .lseven{
+            animation: aone 0.7s ease-in-out 1.6s  1 backwards;
+
+        }
+
+        .animate .ball{
+            margin-top: 10px;
+            background-color: #B1E7EF;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            animation: aball 1.5s ease-in-out 1s 1 both;
+        }
+        .dum{
+            margin-top: 10px;
+            position: relative;
+            height: 30px;
+            width: 30px;
+
+        }
+
+
+        @keyframes aball {
+            
+            0%{
+                transform: translateX(0px);
+                
+            }
+            6%{
+                border-radius: 50%;
+                width: 70px;
+            }
+
+            100%{
+                transform: translateX(220px);
+            }
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="outer-div">
+    <div class="box ">
+        <div class="letter lone">L</div>
+        <div class="letter ltwo">o</div>
+        <div class="letter lthree">a</div>
+        <div class="letter lfour">d</div>
+        <div class="letter lfive">i</div>
+        <div class="letter lsix">n</div>
+        <div class="letter lseven">g</div>
+    </div>
+
+    <div class="ball dum"></div>
+</div>
+
+
+
+<script>
+
+
+    const startAnimationWithDelay =()=>{
+
+    const out = document.querySelector(".outer-div");
+        
+        out.classList.add('animate');
+        setTimeout(()=>{},1000);
+        setTimeout(() => {
+                out.classList.remove('animate');
+        }, 3000);
+
+    }
+
+
+    setInterval(() => {
+            startAnimationWithDelay();
+        }, 4000);
+
+</script>
+    
+
+
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        body{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .big-box{
+            position: relative;
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 600px;
+            background-color: aquamarine;
+        }
+
+        .small{
+            position: absolute;
+            height: 300px;
+            width: 150px;
+            border-radius: 10px;
+            background-color: red;
+            border: 1px solid rgb(125, 6, 6);
+        }
+        .card1{
+            transform-origin:bottom left ;
+            opacity: 0.3;
+            animation: cone 3s 1s 1 both;
+            
+        }
+        .card2{
+            transform-origin:bottom left ;
+            opacity: 0.5;
+            animation: ctwo 3s 1s 1 both;
+        }
+        .card3{
+            transform-origin:bottom left ;
+            opacity: 0.7;
+            animation: cthree 3s 1s 1 both;
+        }
+        .card4{
+            transform-origin:bottom left ;
+            animation: cfour 3s 1s 1 both;
+        }
+        @keyframes cone {
+            from{
+                transform: rotate(0);
+            }
+
+            to{
+                transform: rotate(10deg);
+            }
+        }
+        @keyframes ctwo {
+            from{
+                transform: rotate(0);
+            }
+
+            to{
+                transform: rotate(30deg);
+            }
+        }
+        @keyframes cthree {
+            from{
+                transform: rotate(0);
+            }
+
+            to{
+                transform: rotate(50deg);
+            }
+        }
+        @keyframes cfour {
+            from{
+                transform: rotate(0);
+            }
+
+            to{
+                transform: rotate(70deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="big-box">
+        <div class="small card1"></div>
+        <div class="small card2"></div>
+        <div class="small card3"></div>
+        <div class="small card4"></div>
+    </div>
+
+
+</body>
+</html>
