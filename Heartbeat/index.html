@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0b1522;
+        }
+        .main{
+        }
+        .center{
+            background-color: red;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            transform: rotate(45deg);
+            box-shadow: -10px  10px 50px rgba(255, 0, 0, 0.263);
+            animation: heartb 1s ease-in-out  infinite;
+        }
+        .center::before{
+            content: '';
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            box-shadow: -10px  -10px 50px rgba(255, 0, 0, 0.263);
+            animation: heartb 1s ease-in-out  infinite;
+
+        }
+        .center::after{
+            content: '';
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 10px  10px 50px rgba(255, 0, 0, 0.263);
+
+            transform: translateX(-50%);
+            animation: heartb 1s ease-in-out  infinite;
+
+        }
+
+        @keyframes heartb {
+            0%{
+                height: 100px;
+                width: 100px;
+            }
+            40%{
+                height: 110px;
+                width: 110px;
+                box-shadow: 10px  10px 90px rgba(255, 0, 0, 0.675);
+            }
+            50%{
+                height: 120px;
+                width: 120px;
+                box-shadow: 10px  10px 90px rgba(255, 0, 0, 0.675);
+            }
+            65%{
+                height: 110px;
+                width: 110px;
+                box-shadow: 10px  10px 90px rgba(255, 0, 0, 0.675);
+            }
+            70%{
+                height: 120px;
+                width: 120px;
+                box-shadow: 10px  10px 90px rgba(255, 0, 0, 0.675);
+            }
+            100%{
+                height: 100px;
+                width: 100px;
+
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="center"></div>
+    </div>
+
+    
+</body>
+</html>
